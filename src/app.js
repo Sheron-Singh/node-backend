@@ -17,4 +17,15 @@ app.use(express.static("public")) //files images strore krne ke liye local
 app.use(cookieParser()) 
 
 
+// routes import
+import userRouter from './routes/user.routes.js'
+
+
+// routes declaration
+app.use("/api/v1/users", userRouter)
+
+// http://localhost:3000/api/v1/users/register
+
+
+
 export { app }
